@@ -7,46 +7,43 @@ $(function() { // Makes sure that your function is called once all the DOM eleme
     $('.treat-button').click(clickedTreatButton);
     $('.play-button').click(clickedPlayButton);
     $('.exercise-button').click(clickedExerciseButton);
-  
 
-  
     
   })
   
-    // Add a variable "pet_info" equal to a object with the name (string), weight (number), and happiness (number) of your pet
-    var pet_info = {name:"My Pet Name", weight:"??", happiness:"??"};
+  // Add a variable "pet_info" equal to a object with the name (string), weight (number), and happiness (number) of your pet
+  var pet_info = {name:"Jeff the Land Shark", weight:"??", happiness:"??"};
+
+  function clickedTreatButton() {
+    // Increase pet happiness
+    // Increase pet weight
+    checkAndUpdatePetInfoInHtml();
+  }
   
-    function clickedTreatButton() {
-      // Increase pet happiness
-      // Increase pet weight
-      checkAndUpdatePetInfoInHtml();
-    }
-    
-    function clickedPlayButton() {
-      // Increase pet happiness
-      // Decrease pet weight
-      checkAndUpdatePetInfoInHtml();
-    }
-    
-    function clickedExerciseButton() {
-      // Decrease pet happiness
-      // Decrease pet weight
-      checkAndUpdatePetInfoInHtml();
-    }
+  function clickedPlayButton() {
+    // Increase pet happiness
+    // Decrease pet weight
+    checkAndUpdatePetInfoInHtml();
+  }
   
-    function checkAndUpdatePetInfoInHtml() {
-      checkWeightAndHappinessBeforeUpdating();  
-      updatePetInfoInHtml();
-    }
-    
-    function checkWeightAndHappinessBeforeUpdating() {
-      // Add conditional so if weight is lower than zero.
-    }
-    
-    // Updates your HTML with the current values in your pet_info object
-    function updatePetInfoInHtml() {
-      $('.name').text(pet_info['name']);
-      $('.weight').text(pet_info['weight']);
-      $('.happiness').text(pet_info['happiness']);
-    }
+  function clickedExerciseButton() {
+    // Decrease pet happiness
+    // Decrease pet weight
+    checkAndUpdatePetInfoInHtml();
+  }
+
+  function checkAndUpdatePetInfoInHtml() {
+    checkWeightAndHappinessBeforeUpdating();  
+    updatePetInfoInHtml();
+  }
   
+  function checkWeightAndHappinessBeforeUpdating() {
+    // Add conditional so if weight is lower than zero.
+  }
+  
+  // Updates your HTML with the current values in your pet_info object
+  function updatePetInfoInHtml() {
+    $('.name').text(pet_info['name']);
+    $('.weight').text(pet_info['weight']);
+    $('.happiness').text(pet_info['happiness']);
+  }
